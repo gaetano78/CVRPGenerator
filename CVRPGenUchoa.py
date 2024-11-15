@@ -12,22 +12,13 @@ import random
 import math
 import matplotlib.pyplot as plt
 
+# Imposta la configurazione della pagina
+st.set_page_config(page_title="CVRP Generator", layout="wide")
+
 # Aggiungi uno stile personalizzato per un aspetto professionale
-st.set_page_config(page_title="CVRP Generator", layout="centered")
-
-# Aggiungi una barra del titolo
-st.markdown(
-    "<h1 style='text-align: center; color: #D3D3D3;'>CVRP Generator</h1>",
-    unsafe_allow_html=True,
-)
-
 st.markdown(
     """
     <style>
-    /* Disabilita lo scrolling per l'intera pagina */
-    body {
-        overflow: hidden !important;
-    }
     .stButton>button {
         background-color: navy;
         color: white;
@@ -35,7 +26,7 @@ st.markdown(
     .column-title {
         font-size: 24px;
         font-weight: bold;
-        color: #D3D3D3;
+        color: navy;
         margin-bottom: 10px;
         text-align: center;
     }
