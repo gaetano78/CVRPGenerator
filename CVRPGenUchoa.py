@@ -330,9 +330,11 @@ with col2:
         fig = plot_instance(V, seeds)
         st.pyplot(fig)
     else:
-        # Mostra il placeholder
-        st.markdown("<div class='placeholder'>Plot non disponibile</div>", unsafe_allow_html=True)
-
+        else:
+        st.markdown(
+            "<div class='placeholder'>Genera un'istanza per visualizzare il plot.</div>",
+            unsafe_allow_html=True,
+        )
 # Colonna destra: Visualizza il contenuto dell'istanza o il placeholder
 with col3:
     st.markdown("<div class='column-title'>CVRP Instance</div>", unsafe_allow_html=True)
