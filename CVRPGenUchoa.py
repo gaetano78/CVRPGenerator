@@ -265,37 +265,34 @@ with col1:
     st.markdown("<div class='column-title'>Settings</div>", unsafe_allow_html=True)
     with st.expander("Parametri"):  # Parametri in una sezione espandibile
         n = st.number_input("Numero di clienti (n)", min_value=1, max_value=1000, value=100)
-    n = st.number_input(
-        "Numero di clienti (n)", min_value=1, max_value=1000, value=100
-    )
-    rootPos = st.selectbox(
-        "Posizionamento del deposito (rootPos)",
-        options=[1, 2, 3],
-        index=0,
-        format_func=lambda x: {1: "Random", 2: "Centro", 3: "Angolo in alto a sinistra"}[x],
-    )
-    custPos = st.selectbox(
-        "Posizionamento dei clienti (custPos)",
-        options=[1, 2, 3],
-        index=0,
-        format_func=lambda x: {1: "Random", 2: "Clusterizzato", 3: "Misto"}[x],
-    )
-    demandType = st.selectbox(
-        "Tipo di distribuzione della domanda (demandType)",
-        options=[1, 2, 3, 4, 5, 6, 7],
-        index=0,
-    )
-    avgRouteSize = st.selectbox(
-        "Dimensione media della rotta (avgRouteSize)",
-        options=[1, 2, 3, 4, 5, 6],
-        index=0,
-    )
-    instanceID = st.number_input(
-        "ID dell'istanza (instanceID)", min_value=1, value=1
-    )
-    randSeed = st.number_input(
-        "Seed casuale (randSeed)", min_value=0, value=1
-    )
+        rootPos = st.selectbox(
+            "Posizionamento del deposito (rootPos)",
+            options=[1, 2, 3],
+            index=0,
+            format_func=lambda x: {1: "Random", 2: "Centro", 3: "Angolo in alto a sinistra"}[x],
+        )
+        custPos = st.selectbox(
+            "Posizionamento dei clienti (custPos)",
+            options=[1, 2, 3],
+            index=0,
+            format_func=lambda x: {1: "Random", 2: "Clusterizzato", 3: "Misto"}[x],
+        )
+        demandType = st.selectbox(
+            "Tipo di distribuzione della domanda (demandType)",
+            options=[1, 2, 3, 4, 5, 6, 7],
+            index=0,
+        )
+        avgRouteSize = st.selectbox(
+            "Dimensione media della rotta (avgRouteSize)",
+            options=[1, 2, 3, 4, 5, 6],
+            index=0,
+        )
+        instanceID = st.number_input(
+            "ID dell'istanza (instanceID)", min_value=1, value=1
+        )
+        randSeed = st.number_input(
+            "Seed casuale (randSeed)", min_value=0, value=1
+        )
 
     # Aggiungi un pulsante per avviare l'elaborazione
     generate_button = st.button("Genera Istanza")
