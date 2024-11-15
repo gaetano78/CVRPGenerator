@@ -10,6 +10,7 @@ Original file is located at
 import streamlit as st
 import random
 import math
+import matplotlib
 import matplotlib.pyplot as plt
 
 # Imposta la configurazione della pagina
