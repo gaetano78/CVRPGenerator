@@ -40,10 +40,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 # Crea tre colonne con rapporti di larghezza specifici
-#col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([1, 1.5, 1])  
 
-# Layout a 3 colonne
-col1, col2, col3 = st.columns(3)
 
 # Costanti
 maxCoord = 1000  # Dimensione massima della griglia
