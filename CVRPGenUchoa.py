@@ -26,7 +26,7 @@ st.markdown(
     .column-title {
         font-size: 24px;
         font-weight: bold;
-        color: navy;
+        color: #F5F5F5;
         margin-bottom: 10px;
         text-align: center;
     }
