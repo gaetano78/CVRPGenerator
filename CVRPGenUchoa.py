@@ -23,7 +23,7 @@ st.markdown(
 
 # Aggiungi uno stile personalizzato per un aspetto professionale
 st.markdown(
-    
+    """
     <style>
     .stButton>button {
         background-color: navy;
@@ -47,7 +47,7 @@ st.markdown(
         font-size: 18px;
     }
     </style>
-    ,
+    """,
     unsafe_allow_html=True,
 )
 
