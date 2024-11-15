@@ -10,7 +10,6 @@ Original file is located at
 import streamlit as st
 import random
 import math
-import matplotlib
 import matplotlib.pyplot as plt
 
 # Imposta la configurazione della pagina
@@ -19,6 +18,36 @@ st.set_page_config(page_title="CVRP Generator", layout="wide")
 # Aggiungi una barra del titolo
 st.markdown(
     "<h1 style='text-align: center; color: navy;'>CVRP Generator</h1>",
+    unsafe_allow_html=True,
+)
+
+# Aggiungi uno stile personalizzato per un aspetto professionale
+st.markdown(
+    
+    <style>
+    .stButton>button {
+        background-color: navy;
+        color: white;
+    }
+    .column-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: navy;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .placeholder {
+        background-color: #d3d3d3; /* Grigio scuro */
+        border: 1px dashed #cccccc;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 18px;
+    }
+    </style>
+    ,
     unsafe_allow_html=True,
 )
 
@@ -242,7 +271,7 @@ def plot_instance(V, seeds):
 
 # Colonna sinistra: Input dei parametri
 with col1:
-    st.header("Parametri")
+    st.markdown("<div class='column-title'>Settings</div>", unsafe_allow_html=True)
     n = st.number_input(
         "Numero di clienti (n)", min_value=1, max_value=1000, value=100
     )
@@ -278,8 +307,9 @@ with col1:
     # Aggiungi un pulsante per avviare l'elaborazione
     generate_button = st.button("Genera Istanza")
 
-# Colonna centrale: Visualizza il plot
+# Colonna centrale: Visualizza il plot o il placeholder
 with col2:
+    st.markdown("<div class='column-title'>Plot</div>", unsafe_allow_html=True)
     if generate_button:
         # Imposta il seed del generatore di numeri casuali
         random.seed(randSeed)
@@ -311,11 +341,14 @@ with col2:
         # Plot dell'istanza
         fig = plot_instance(V, seeds)
         st.pyplot(fig)
+    else:
+        # Mostra il placeholder
+        st.markdown("<div class='placeholder'>Plot non disponibile</div>", unsafe_allow_html=True)
 
-# Colonna destra: Visualizza il contenuto dell'istanza e pulsante di download
+# Colonna destra: Visualizza il contenuto dell'istanza o il placeholder
 with col3:
+    st.markdown("<div class='column-title'>CVRP Instance</div>", unsafe_allow_html=True)
     if generate_button:
-        st.header("Istanza Generata")
         # Visualizza il contenuto dell'istanza in un'area di testo scrollabile
         st.text_area("Istanza (.vrp format)", instance_content, height=400)
         # Fornisci un pulsante di download
@@ -325,16 +358,7 @@ with col3:
             file_name=f"{instanceName}.vrp",
             mime="text/plain",
         )
+    else:
+        # Mostra il placeholder
+        st.markdown("<div class='placeholder'>Istanza non disponibile</div>", unsafe_allow_html=True)
 
-# Aggiungi uno stile personalizzato per un aspetto professionale
-st.markdown(
-    """
-    <style>
-    .stButton>button {
-        background-color: navy;
-        color: white;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
