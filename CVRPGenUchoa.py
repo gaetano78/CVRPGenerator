@@ -348,7 +348,7 @@ with col3:
     st.markdown("<div class='column-title'>CVRP Instance</div>", unsafe_allow_html=True)
     if generate_button:
         # Visualizza il contenuto dell'istanza in un'area di testo scrollabile
-        st.text_area("Istanza (.vrp format)", instance_content, height=400)
+        st.text_area("Istanza (.vrp format)", instance_content, height=300)
         # Fornisci un pulsante di download
         st.download_button(
             label="Scarica il file .vrp",
