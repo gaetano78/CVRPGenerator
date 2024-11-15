@@ -260,6 +260,8 @@ def plot_instance(V, seeds):
 # Colonna sinistra: Input dei parametri
 with col1:
     st.markdown("<div class='column-title'>Settings</div>", unsafe_allow_html=True)
+    with st.expander("Parametri"):  # Parametri in una sezione espandibile
+        n = st.number_input("Numero di clienti (n)", min_value=1, max_value=1000, value=100)
     n = st.number_input(
         "Numero di clienti (n)", min_value=1, max_value=1000, value=100
     )
