@@ -17,33 +17,23 @@ st.set_page_config(page_title="CVRP Generator", layout="wide")
 
 # Aggiungi una barra del titolo
 st.markdown(
-    "<h2 style='text-align: center; color: #F5F5F5;'>CVRP Generator</h2>",
-    unsafe_allow_html=True,
-)
-# Aggiungi uno stile personalizzato per un aspetto professionale
-st.markdown(
     """
     <style>
-    .stButton>button {
-        background-color: navy;
-        color: white;
-    }
     .column-title {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
-        color: #F5F5F5;
-        margin-bottom: 10px;
-        text-align: center;
+        color: #FFFFFF; /* Colore del titolo */
+        padding: 10px;
+        background-color: #23272A; /* Colore di sfondo del titolo */
+        border-radius: 5px;
     }
     .placeholder {
-        background-color: #23272A;
-        border: 1px dashed #cccccc;
-        height: 400px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        font-size: 18px;
+        font-size: 16px;
+        color: #ADD8E6; /* Colore del testo del placeholder */
+        text-align: center;
+        padding: 20px;
+        border: 2px dashed #ADD8E6; /* Bordo tratteggiato per il placeholder */
+        border-radius: 5px;
     }
     </style>
     """,
