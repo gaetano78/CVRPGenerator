@@ -329,7 +329,7 @@ with col2:
         # Plot dell'istanza
         fig = plot_instance(V, seeds)
         st.pyplot(fig)
-        else:
+    else:
         st.markdown(
             "<div class='placeholder'>Genera un'istanza per visualizzare il plot.</div>",
             unsafe_allow_html=True,
