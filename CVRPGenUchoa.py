@@ -17,7 +17,7 @@ st.set_page_config(page_title="CVRP Generator", layout="wide")
 
 # Aggiungi una barra del titolo
 st.markdown(
-    "<h1 style='text-align: center; color: navy;'>CVRP Generator</h1>",
+    "<h2 style='text-align: center; color: #F5F5F5;'>CVRP Generator</h2>",
     unsafe_allow_html=True,
 )
 # Aggiungi uno stile personalizzato per un aspetto professionale
