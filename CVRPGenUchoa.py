@@ -29,7 +29,7 @@ st.markdown(
         color: white;
     }
     .column-title {
-        font-size: 24px;
+        #font-size: 24px;
         font-weight: bold;
         color: navy;
         margin-bottom: 10px;
