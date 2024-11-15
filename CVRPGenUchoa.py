@@ -22,9 +22,15 @@ st.markdown(
 )
 
 # Aggiungi uno stile personalizzato per un aspetto professionale
+st.set_page_config(page_title="CVRP Generator", layout="centered")
+
 st.markdown(
-  """
+    """
     <style>
+    /* Disabilita lo scrolling per l'intera pagina */
+    body {
+        overflow: hidden !important;
+    }
     .stButton>button {
         background-color: navy;
         color: white;
@@ -50,7 +56,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
 # Crea tre colonne con rapporti di larghezza specifici
 col1, col2, col3 = st.columns([1, 2, 1])
 
