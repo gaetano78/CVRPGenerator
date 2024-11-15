@@ -29,20 +29,20 @@ st.markdown(
         color: white;
     }
     .column-title {
-        #font-size: 24px;
+        font-size: 24px;
         font-weight: bold;
         color: navy;
         margin-bottom: 10px;
         text-align: center;
     }
     .placeholder {
-        background-color: #d3d3d3; /* Grigio scuro */
-        border: 1px dashed #cccccc;
+        background-color: 
+        border: 1px dashed 
         height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #ffffff;
+        color: 
         font-size: 18px;
     }
     </style>
