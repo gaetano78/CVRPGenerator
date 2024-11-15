@@ -37,7 +37,7 @@ st.markdown(
         text-align: center;
     }
     .placeholder {
-        background-color: #ADD8E6;
+        background-color: #FAFAD2;
         border: 1px dashed #cccccc;
         height: 400px;
         display: flex;
