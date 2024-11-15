@@ -12,7 +12,6 @@ import sys
 import random
 import math
 import os
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import io
 
