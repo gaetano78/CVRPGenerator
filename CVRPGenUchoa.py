@@ -23,6 +23,7 @@ st.markdown(
 
 # Aggiungi uno stile personalizzato per un aspetto professionale
 st.markdown(
+  """
     <style>
     .stButton>button {
         background-color: navy;
@@ -36,17 +37,17 @@ st.markdown(
         text-align: center;
     }
     .placeholder {
-        background-color: 
-        border: 1px dashed 
+        background-color: #d3d3d3;
+        border: 1px dashed #cccccc;
         height: 400px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: 
+        color: #ffffff;
         font-size: 18px;
     }
     </style>
-    ,
+    """,
     unsafe_allow_html=True,
 )
 
