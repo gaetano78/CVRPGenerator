@@ -272,7 +272,7 @@ with col1:
             "Posizionamento del deposito (rootPos)",
             options=[1, 2, 3],
             index=0,
-            format_func=lambda x: {1: "Random", 2: "Centro", 3: "Angolo in alto a sinistra"}[x],
+            format_func=lambda x: {1: "Random", 2: "Centro", 3: "angolo (0,0)"}[x],
         )
         custPos = st.selectbox(
             "Posizionamento dei clienti (custPos)",
